@@ -1,6 +1,6 @@
-# SAVI Project Bootstrap
+# JS Project Bootstrap
 
-This repo is a showcase on how to setup a modern JS project using som defacto
+This repo is a showcase on how to setup a modern JS project using some defacto
 tools for a better and easier CI.
 
 ## Tooling
