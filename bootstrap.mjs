@@ -31,6 +31,7 @@ async function installDependencies() {
     'eslint-plugin-prettier',
     'eslint@^8.2.0',
     'husky',
+    'imagemin-lint-staged',
     'lint-staged',
     'markdownlint',
     'markdownlint-cli',
