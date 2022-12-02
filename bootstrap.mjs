@@ -191,8 +191,7 @@ async function prepareSemanticRelease() {
           },
         ],
       ],
-      repositoryUrl:
-        'git@github.com:valassis-fcalle/savi-project-bootstrap-demo.git',
+      repositoryUrl: 'REPLACE ME',
     },
     { spaces: 2 }
   );
