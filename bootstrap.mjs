@@ -135,7 +135,7 @@ async function prepareFormatter() {
     `{
   "semi": true,
   "trailingComma": "es5",
-  "printWidth": 120,
+  "printWidth": 80,
   "singleQuote": true,
   "arrowParens": "always",
   "proseWrap": "preserve"
