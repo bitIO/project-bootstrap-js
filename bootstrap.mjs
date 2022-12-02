@@ -13,7 +13,6 @@ async function prepare() {
 
   await $`npm init -y`;
   await $`git init`;
-  await $`git remote add origin git@github.com:valassis-fcalle/savi-project-bootstrap-demo.git`;
   fs.writeFileSync('.gitignore', 'node_modules');
 }
 
