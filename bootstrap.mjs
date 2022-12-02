@@ -32,6 +32,7 @@ async function installDependencies() {
     'eslint@^8.2.0',
     'husky',
     'imagemin-lint-staged',
+    'jest',
     'lint-staged',
     'markdownlint',
     'markdownlint-cli',
@@ -199,8 +200,31 @@ async function prepareSemanticRelease() {
   await $`npm set-script "release:dry" "semantic-release --dry-run"`;
 }
 
+async function prepareTest() {
+  printStep('Setting up semantic jest ...');
+  fs.ensureFileSync('./jest.config.js');
+  fs.writeFileSync(
+    './jest.config.js',
+    `/*
+  * For a detailed explanation regarding each configuration property, visit:
+  * https://jestjs.io/docs/configuration
+*/
+
+module.exports = {
+  clearMocks: true,
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageProvider: 'v8',
+};
+`
+  );
+  await $`npm set-script test "jest"`;
+}
+
 await prepare();
+
 await installDependencies();
+
 await prepareHusky();
 await prepareSpellChecker();
 await prepareCommitLint();
@@ -208,3 +232,4 @@ await prepareLinter();
 await prepareFormatter();
 await prepareLintStaged();
 await prepareSemanticRelease();
+await prepareTest();
