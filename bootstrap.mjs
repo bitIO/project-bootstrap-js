@@ -23,6 +23,7 @@ async function installDependencies() {
     '@commitlint/config-conventional',
     '@semantic-release/changelog',
     '@semantic-release/git',
+    '@types/jest',
     'cspell',
     'eslint-config-airbnb-base@latest',
     'eslint-config-prettier',
@@ -56,7 +57,6 @@ async function prepareSpellChecker() {
     {
       ignorePaths: ['node_modules'],
       words: [
-        'capi',
         'commitlint',
         'imagemin',
         'markdownlint',
@@ -102,6 +102,7 @@ async function prepareLinter() {
   env: {
     commonjs: true,
     es2021: true,
+    jest: true,
     node: true,
   },
   extends: ["airbnb-base"],
@@ -135,12 +136,12 @@ async function prepareFormatter() {
   fs.writeFileSync(
     './.prettierrc',
     `{
-  "semi": true,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "singleQuote": true,
   "arrowParens": "always",
-  "proseWrap": "preserve"
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
 }
   `
   );
