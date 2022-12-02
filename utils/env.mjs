@@ -1,5 +1,5 @@
-import { $ } from "zx";
+import { $ } from 'zx';
 
 $.verbose = !!process.env.DEBUG || false;
 
-export const PROJECT_FOLDER = "savi-project-bootstrap";
+export const PROJECT_FOLDER = 'your-project-folder';
