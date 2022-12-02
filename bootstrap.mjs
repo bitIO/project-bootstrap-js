@@ -56,15 +56,11 @@ async function prepareSpellChecker() {
       words: [
         'capi',
         'commitlint',
-        'eudev',
-        'fcalle',
         'imagemin',
         'markdownlint',
         'parens',
         'postcss',
-        'savi',
         'stylelint',
-        'valassis',
       ],
     },
     { spaces: 2 }
